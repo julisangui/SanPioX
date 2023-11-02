@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Open+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*--------------------HEADER--------------------*/
+
+
+/*LOGO*/
+
+
+header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.logo-colegio h1 {
+    font-family: 'libre baskerville';
+    color: rgb(01, 38, 70);
+    font-size: 1.2em;
+    font-weight: 550;
+    letter-spacing: 0.2em;
+}
+
+.logo-colegio h3 {
+    font-family: 'Open Sans';
+    font-size: 0.7em;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+}
+
+@media(max-width:920px){
+
+    .logo {
+        height: 50px;
+    }
+
+    .logo-colegio h1 {
+        font-size: 0.9em;
+    }
+    
+    .logo-colegio h3 {
+        font-size: 0.7em;
+    }
+}
+
+
+/*BARRA DE NAVEGACION*/
+
+
+.lista-menu {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    color: rgb(01, 38, 70);
+}
+
+.menu {
+    color: rgb(10, 10, 10);
+    font-family: 'Open Sans';
+    font-size: 0.8em;
+    text-decoration: none;
+    margin-left: 30px;
+    position: relative;
+}
+
+.menu:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: rgb(01, 38, 70);
+    transform-origin: center;
+    transition: transform 0.5s ease-out;
+}  
+
+.menu:hover:after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.menu-submenu {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0px 8px 16px 0px rgb(10, 10, 10);
+    z-index: 1;
+    list-style: none;
+    left: 45%;
+    transform: translateX(-30%);
+}
+
+.menu-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    display: block;
+    font-family: 'Open Sans';
+    font-size: 0.8em;
+    padding: 5px;
+    transition: background-color 0.5s ease;
+}
+
+.submenu a:hover {
+    background-color: rgb(01, 38, 70);
+    transition: .5s;
+    color: rgb(255, 255, 255);
+}
+
+.abrir-menu, .cerrar-menu {
+    display: none;
+}
+
+@media(max-width:850px){
+
+    .menu {
+        font-size: 0.65em;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: rgb(30, 30, 30);
+    }
+
+    .cerrar-menu {
+        color: rgb(255, 255, 255);
+    }
+
+    .lista-menu{
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+    }
+
+    .barra-navegacion{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+    }
+
+    .barra-navegacion.visible{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .menu{
+        color: rgb(255, 255, 255);
+        margin-left: 0px;
+    }
+    
+    .menu:after{
+        background-color: hsl(56, 100%, 46%);
+    }
+
+    .menu-submenu:hover .submenu {
+        display: none;
+    }
+
+    header nav {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .barra-navegacion.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+/*--------------------HERO--------------------*/
+
+
+.hero {
+    background-image: url("Assets/bienvenida.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    width: 100%;
+}
+
+
+/*--------------------HISTORIA--------------------*/
+
+
+.historia {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.historia1 {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.historia1 h2 {
+    font-family: 'libre baskerville';
+    font-weight: 200;
+    color: rgb(255, 217, 0);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+}
+
+.historia1 p {
+    font-family: 'Bahnschrift SemiCondensed';
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.historia2 {
+    background-image: url("Assets/fondo-historia.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 1;
+}
+
+@media(max-width: 768px) {
+    
+    .historia1 {
+        width: 100%;
+    }
+
+    .historia2 {
+        display: none;
+    }
+}
+
+
+/*--------------------NIVELES--------------------*/
+
+
+.niveles {
+    background-color: rgb(240, 223, 204);
+    height: auto;
+}
+
+.contenedor-niveles {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.niveles h2 {
+    color: rgb(01, 38, 70);
+    font-family: 'libre baskerville';
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.niveles h3 {
+    color: rgb(01, 38, 70);
+    font-family: 'libre baskerville';
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+}
+
+.nivel {
+    width: 100%;
+    border-left: 1px solid rgb(01, 38, 70);
+    border-right: 1px solid rgb(01, 38, 70);
+}
+
+.nivel:first-child {
+    border-left: none;
+}
+
+.nivel:last-child {
+    border-right: none;
+}
+
+.niveles a {
+    text-decoration: none;
+}
+
+.niveles p{
+    font-family: 'Bahnschrift SemiCondensed';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: rgb(01, 38, 70);
+    padding-bottom: 50px;
+}
+
+.niveles button{
+    background-color: rgb(255, 255, 255);
+    font-family: "open sans";
+    color: rgb(10, 10, 10);
+    height: 50px;
+    width: 150px;
+    font-size: 1em;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.niveles button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(01, 38, 70);
+}
+
+@media(max-width: 768px) {
+
+    .contenedor-niveles {
+        display: block;
+        padding-bottom: 20px;
+    }
+
+    .nivel{
+        border: none;
+    }
+
+    .niveles button{
+        margin-bottom: 100px;
+    }
+}
+
+
+/*--------------------ORIENTACIONES--------------------*/
+
+
+.orientaciones {
+    background-color: rgb(01, 38, 70);
+    height: auto;
+}
+
+.contenedor-orientaciones {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.orientaciones h2{
+    color: rgb(240, 223, 204);
+    font-family: 'libre baskerville';
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.orientaciones h3{
+    color: rgb(240, 223, 204);
+    font-family: 'libre baskerville';
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+}
+
+.orientacion {
+    width: 100%;
+    border-left: 1px solid rgb(240, 223, 204);
+    border-right: 1px solid rgb(240, 223, 204);
+}
+
+.orientacion:first-child {
+    border-left: none;
+}
+
+.orientacion:last-child {
+    border-right: none;
+}
+
+.orientaciones a {
+    text-decoration: none;
+}
+
+.orientaciones button{
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 10, 10);
+    font-family: "open sans";
+    height: 50px;
+    width: 150px;
+    font-size: 1em;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.orientaciones button:hover{
+    background-color: rgb(70, 45, 18);
+    color: rgb(255, 255, 255);
+}
+
+@media(max-width: 768px) {
+    
+    .contenedor-orientaciones {
+        display: block;
+        padding-bottom: 20px;
+    }
+
+    .orientacion {
+        border: none;
+    }
+
+    .orientaciones button {
+        margin-bottom: 100px;
+    }
+}
+
+
+/*--------------------INSCRIPCION & MATRICULACION--------------------*/
+
+
+.inscripcion{
+    background-color: rgb(129, 20, 44);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inscripcion h2{
+    font-family: 'libre baskerville';
+    text-align: center;
+    color: rgb(235, 219, 0);
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.inscripcion p{
+    font-family: 'Bahnschrift SemiCondensed';
+    text-align: justify;
+    width: 50%;
+    color: rgb(255, 255, 255);;
+    padding-bottom: 50px;
+}
+
+.inscripcion button{
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 10, 10);
+    font-family: "open sans";
+    height: 50px;
+    width: 150px;
+    font-size: 1em;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    margin-bottom: 50px;
+}
+
+.inscripcion button:hover{
+    background-color: rgb(235, 219, 0);
+    color: rgb(10, 10, 10);
+}
+
+
+/*--------------------FOOTER--------------------*/
+
+
+footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(50, 50, 50);
+    color: #fff;
+    font-family: "open sans";
+    width: 100%;
+}
+
+.div-footer {
+    display: block;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.div-footer h3 {
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+.div-footer p {
+    font-size: 1em;
+}
+.bi-facebook {
+    color: rgb(255, 255, 255);
+    font-size: 5vh;
+    transition: 0.5s ease;
+}
+
+.bi-facebook:hover{
+    color: #00aced;
+}
+
+.footer-cophy {
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.footer-cophy p{
+    border-top: 1px solid rgb(255, 255, 255);
+    font-family: 'Open Sans';
+    text-align: center;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 20px;
+    width: 70%;
+}
+
+@media(max-width: 768px) {
+
+    footer {
+        background-color: rgb(50, 50, 50);
+        display: block;
+    }
+}
