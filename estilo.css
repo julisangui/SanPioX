@@ -139,7 +139,7 @@ header {
     display: none;
 }
 
-@media(max-width:850px){
+@media(max-width:865px){
 
     .menu {
         font-size: 0.65em;
@@ -235,14 +235,12 @@ header {
 
 .historia {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
+    width: 100%;
 }
 
 .historia1 {
     flex: 1;
     padding: 20px;
-    box-sizing: border-box;
     text-align: center;
 }
 
@@ -495,7 +493,7 @@ header {
 
 .inscripcion p{
     font-family: 'Bahnschrift SemiCondensed';
-    text-align: center;
+    text-align: justify;
     width: 50%;
     color: rgb(255, 255, 255);;
     padding-bottom: 50px;
@@ -564,6 +562,13 @@ footer {
     text-align: center;
     justify-content: center;
     padding-top: 20px;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 5px;
 }
 
 .footer-cophy p{
