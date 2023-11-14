@@ -532,15 +532,22 @@ footer {
     width: 100%;
 }
 
-.div-footer {
-    display: block;
+.contenedor-footer{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    justify-content: space-between;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.div-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .div-footer h3 {
     font-size: 1.5em;
-    padding: 15px;
 }
 
 .div-footer p {
@@ -562,13 +569,6 @@ footer {
     text-align: center;
     justify-content: center;
     padding-top: 20px;
-}
-
-.redes{
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    gap: 5px;
 }
 
 .footer-cophy p{
