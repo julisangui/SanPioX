@@ -553,13 +553,19 @@ footer {
 .div-footer p {
     font-size: 1em;
 }
-.bi-facebook {
+
+.redes h3, .redes p{
+    padding: 10px;
+}
+
+footer i {
     color: rgb(255, 255, 255);
     font-size: 5vh;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 
-.bi-facebook:hover{
+footer i:hover{
     color: #00aced;
 }
 
