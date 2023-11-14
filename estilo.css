@@ -493,7 +493,7 @@ header {
 
 .inscripcion p{
     font-family: 'Bahnschrift SemiCondensed';
-    text-align: justify;
+    text-align: center;
     width: 50%;
     color: rgb(255, 255, 255);;
     padding-bottom: 50px;
