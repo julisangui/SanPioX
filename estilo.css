@@ -560,7 +560,7 @@ footer {
 
 footer i {
     color: rgb(255, 255, 255);
-    font-size: 5vh;
+    font-size: 30px;
     transition: 0.5s ease;
     cursor: pointer;
 }
